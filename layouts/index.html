@@ -1,0 +1,95 @@
+{{ define "main" }}
+
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1 class="display-3">DevOps all the things!</h1>
+      <p class="lead">
+        List of articles about the IT industry.
+        Software development, site reliability engineering, consultancy practices.
+        Please treat it as a foundation for a web-book of mine.
+      </p>
+    </div>
+    <div class="col-sm-6">
+      <img src="/img/logo.png" class="float-md-right">
+    </div>
+  </div>
+  <div class="row">
+    <hr class="my-4 px-0">
+    <p>
+      For a list of my comics (with a similar flavour) please check and subscribe to my
+      <a href="https://www.instagram.com/koptelov__mikhail/" target="_blank" rel="noopener">instagram</a>.
+    </p>
+    <p>
+      Also you can subscribe for updates about this project here:
+    </p>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="email" placeholder="email address" id="subscribe_email_input">
+      <button class="btn btn-secondary my-2 my-sm-0" type="button" id="subscribe_btn">Subscribe</button>
+    </form>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <p>Hello!</p>
+
+    <p>
+      I am a consultant at <a href="https://www.servian.com/" target="_blank">Servian</a>,
+      Cloud Solution Architect, Azure expert, DevOps professional, and I can add a lot more buzz-words into this
+      sentence.
+      But I would not.
+    </p>
+
+    <p>
+      The idea behind this website is that I want to have a platform to publish my articles on my own.
+      I could use Medium or Blogger, but I think it is fun to try and build something on your own, especially because I
+      can.
+    </p>
+
+    <p>
+      So here I will be a lot of my own opinions based on my work, life experiences, education, moods, and biases.
+      Please enjoy!
+    </p>
+  </div>
+</div>
+
+<!-- 
+
+<div id="home-jumbotron" class="jumbotron text-center">
+{{ with .Content }}
+  <h1>{{ $.Page.Title }}</h1>
+  {{ . }}
+{{ else }}
+  <h1>{{ .Site.Title }}</h1>
+  <p class="font-125">{{ .Site.Params.homeText | markdownify }}</p>
+{{ end }}
+</div> -->
+
+
+<script>
+  window.onload = function () {
+    var btn = document.getElementById("subscribe_btn");
+    if (btn.addEventListener) {
+        btn.addEventListener("click", btnClick, false);
+    } else if (btn.attachEvent) {
+        btn.attachEvent("onclick", btnClick);
+    }
+  };
+
+  async function btnClick() {        
+    let email = document.getElementById("subscribe_email_input").value;
+    console.log(email);
+    var res = await fetch('https://dfny6kzadi.execute-api.ap-southeast-2.amazonaws.com/Prod/subscribe', 
+    {
+      
+      method: "POST",
+      body: '"' + email + '"'
+    })
+    .then(response => { console.log(response);})
+    .catch(err => console.log(err));
+  }
+</script>
+
+
+{{ end }}

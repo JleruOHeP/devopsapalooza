@@ -1,0 +1,46 @@
+<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">DevOps-A-Palooza</a>
+
+    <button class="navbar-toggler" type="button" 
+            data-toggle="collapse" data-target="#navbarColor01" 
+            aria-controls="navbarColor01" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+
+        {{ $showActiveNav := .Site.Params.showActiveNav }}
+        {{ $currentPage := . }}
+
+        {{ range .Site.Menus.nav }}
+        
+        {{ $active := "" }}
+        {{ if eq $showActiveNav true }}
+          {{ $isMenu := or ($currentPage.IsMenuCurrent "nav" .) ($currentPage.HasMenuCurrent "nav" .) }}
+          {{ $isMenu = or $isMenu (eq $currentPage.Params.identifier .Identifier) }}
+          {{ $isMenu = or $isMenu (eq $currentPage.Title .Name) }}
+          {{ $isMenu = or $isMenu (and (eq .Name "Blog") (eq $currentPage.Section "post")) }}
+          {{ $isMenu = or $isMenu (and (eq .Name "Tags") (eq $currentPage.Section "tags")) }}
+          {{ if $isMenu }} 
+            {{ $active = "nav-link-active" }}
+          {{ end }}  
+        {{ end }}
+
+        <li class="nav-item ">
+          <a class="nav-link {{ $active }}" href="{{ .URL }}">
+            {{ $icon := printf "<i data-feather=\"%s\"></i>" .Pre }}
+            {{ $text := print $icon " " .Name | safeHTML }}
+            {{ $text }}
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+      {{ end }}
+      </ul>
+    </div>
+  </div>
+</div>
