@@ -2,6 +2,7 @@
 title: "Just a simple website"
 date: 2022-01-16T18:19:44+01:00
 tags: []
+summary: "How to host a simple website"
 ---
 We are software developers, and building a new website is not a challenging task. My back-end preference is dotnet; the front-end might be React or Angular; webpack to build it; all the source code in GitHub, and use GitHub actions to automate all deployment activities to AWS. Oh, and terraform for infrastructure.
 

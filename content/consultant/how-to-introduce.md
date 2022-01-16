@@ -2,6 +2,7 @@
 title: "How to introduce yourself"
 date: 2022-01-16T18:17:24+01:00
 tags: []
+summary: "Everything starts with a 'hello'"
 ---
 
 As a consultant, you have to introduce yourself a lot. It is possible that you will change your clients every couple of months - depending on the task. But even at a single client, you will need to participate in a lot of meetings. What is the first thing we do during any meeting? Yeah, after the friendly small talk, we jump to the introduction section.
