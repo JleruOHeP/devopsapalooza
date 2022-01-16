@@ -1,7 +1,7 @@
-baseURL: https://example.com
+baseURL: https://devopsapalooza.com/
 languageCode: en-us
-title: Vanilla
-googleAnalytics: UA-123456789-1
+title: DevOps-A-Palooza
+googleAnalytics: G-CQRWJ8H090
 
 taxonomies:
   tag: tags
@@ -27,11 +27,11 @@ menu:
     weight: 3
   - name: Architect
     pre: layers
-    url: /tags/
+    url: /architect/
     weight: 4
   - name: Consultant
     pre: briefcase
-    url: /index.xml
+    url: /consultant/
     weight: 5
   - name: Tags
     pre: hash

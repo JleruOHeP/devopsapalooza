@@ -13,5 +13,8 @@
   {{ if .IsHome }}
     {{ $title = .Site.Title }}
   {{ end }}
+
+  {{ partial "google-analytics-async.html" . }}
+
   <title>{{ $title }}</title>
 </head>
