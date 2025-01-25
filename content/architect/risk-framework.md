@@ -1,7 +1,7 @@
 ---
 title: "Risk Framework"
 date: 2022-01-16T18:24:31+01:00
-tags: []
+tags: ["architect", "framework"]
 summary: "Risk framework for architects"
 ---
 Risk management is an integral part of the delivery of products. There are many various approaches to managing it. For example: ignore it, hope that the risk manager will do everything, take the risk framework provided by the risk team, and copy-paste example actions from it into your project risk assessment. None of those are good tho.

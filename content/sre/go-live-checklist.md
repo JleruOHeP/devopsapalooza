@@ -1,7 +1,7 @@
 ---
 title: "Production Go-Live Checklist"
 date: 2022-01-16T18:20:49+01:00
-tags: []
+tags: ["sre", "documentation"]
 summary: "Template of a pre go-live activities"
 ---
 Often before you go to production with a new application, you need to make sure that every base is covered. It can be a task for a Change Manager or fall into the SRE team’s caring hands. Here is a quick checklist of what might be required:

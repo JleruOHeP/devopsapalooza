@@ -9,6 +9,7 @@
   {{ partial "style.html" . }}
   <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | absURL }}">
   <link rel="stylesheet" href="{{ "css/cerulean.min.css" | absURL }}">
+  <link rel="stylesheet" href="{{ "css/styles.css" | absURL }}">
   {{ $title := print .Title " | " .Site.Title }}
   {{ if .IsHome }}
     {{ $title = .Site.Title }}

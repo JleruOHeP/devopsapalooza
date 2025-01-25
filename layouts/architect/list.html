@@ -8,7 +8,7 @@
 </p>
 
 {{ range .Pages.ByPublishDate.Reverse }}
-<p>
+<p class="list-element">
   <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
   <br>
   <span>{{ .Summary }}</span>

@@ -1,7 +1,6 @@
 baseURL: https://devopsapalooza.com/
 languageCode: en-us
 title: DevOps-A-Palooza
-googleAnalytics: G-CQRWJ8H090
 
 taxonomies:
   tag: tags
@@ -9,14 +8,14 @@ taxonomies:
 permalinks:
   post: /:filename/
 
+services:
+  googleAnalytics:
+    id: $GOOGLE_ANALYTICS_ID
+
 # See https://feathericons.com/
 # The value of pre is the icon name
 menu:
   nav:
-  - name: Home
-    pre: home
-    url: /
-    weight: 1
   - name: Developer
     pre: code
     url: /developer/
@@ -29,14 +28,18 @@ menu:
     pre: layers
     url: /architect/
     weight: 4
-  - name: Consultant
+  - name: Career
     pre: briefcase
-    url: /consultant/
+    url: /career/
     weight: 5
+  - name: Contact Me
+    pre: at-sign
+    url: /contact-me/
+    weight: 6
   - name: Tags
     pre: hash
     url: /tags/
-    weight: 6
+    weight: 7
 
 params:
   includeBootstrapJs: true
