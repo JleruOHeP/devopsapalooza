@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Update config
-        run: envsubst < config.yaml | sponge config.yaml
+        run: envsubst < config.yaml.tmp > config.yaml
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
 
