@@ -100,7 +100,6 @@
     console.log(email);
     var res = await fetch('https://dfny6kzadi.execute-api.ap-southeast-2.amazonaws.com/Prod/subscribe', 
     {
-      mode: 'no-cors',
       method: "POST",
       body: '"' + email + '"'
     })

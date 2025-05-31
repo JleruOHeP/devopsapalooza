@@ -31,6 +31,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-southeast-2
 
-      - name: Sync files to S3 bucket
+      - name: Sync code to lambda
         run: |
           aws lambda update-function-code --function-name Devopsapalooza-Subscribe --zip-file fileb://function.zip --publish
